@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SPConfig 
+    xmlns="urn:mace:shibboleth:2.0:native:sp:config" 
+    xmlns:conf="urn:mace:shibboleth:2.0:native:sp:config" 
+    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" 
+    xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" clockSkew="180">
+    <OutOfProcess logger="shibd.logger" />
+    <InProcess logger="native.logger" />
+    <StorageService type="Memory" id="mem" cleanupInterval="900"/>
+    <SessionCache type="StorageService" StorageService="mem" cacheTimeout="3600" inprocTimeout="900" cleanupInterval="900"/>
+    <ReplayCache StorageService="mem"/>
+    <ArtifactMap artifactTTL="180"/>
+    <RequestMapper type="Native">
+        <RequestMap applicationId="default">
+            <Host name="sp.example.org" redirectToSSL="443">
+                <Path name="secure" authType="shibboleth" requireSession="true" exportAssertion="true"/>
+            </Host>
+        </RequestMap>
+    </RequestMapper>
+    <ApplicationDefaults id="default" entityID="https://sp.example.org/saml/sp" REMOTE_USER="eppn persistent-id targeted-id" signing="true" encryption="false" attributePrefix="SHIB_">
+        <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
+            <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" outgoingBinding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" isPassive="false" signing="true" authnContextComparison="minimum" acsByIndex="false">
+                <samlp:AuthnRequest 
+                    xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
+                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="spid.agid.gov.it" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="2">
+                    <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" NameQualifier="https://sp.example.org/saml/sp">https://sp.example.org/saml/sp</saml:Issuer>
+                </samlp:AuthnRequest>
+            </SessionInitiator>
+            <LogoutInitiator type="Chaining" Location="/Logout">
+                <LogoutInitiator type="SAML2" outgoingBindings="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" signing="true"/>
+                <LogoutInitiator type="Local" signing="true"/></LogoutInitiator>
+            <md:SingleLogoutService Location="/SLO/SOAP" Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"/>
+            <md:SingleLogoutService Location="/SLO/POST" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
+            <md:SingleLogoutService Location="/SLO/REDIRECT" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+            <Handler type="MetadataGenerator" Location="/Metadata" signing="true" signingAlg="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" digestAlg="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <Handler type="Status" Location="/Status" acl="0.0.0.0 127.0.0.1 ::1" />
+            <Handler type="Session" Location="/Session" showAttributeValues="true"/>
+            <Handler type="AttributeChecker" Location="/AttrChecker" template="attrChecker.html" attributes="eppn displayName" flushSession="true"/>
+            <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="/SAML2/POST" index="0" isDefault="true" />
+        </Sessions>
+        <Errors supportContact="pippo@pippo.it" helpLocation="/about.html" styleSheet="/shibboleth-sp/main.css"/>
+        <MetadataProvider type="XML" uri="https://idp.example.org/idp/shibboleth" backingFilePath="idp-example-org-metadata.xml" reloadInterval="600"/>
+        <MetadataProvider type="XML" file="spid/idp-aruba.xml"/>
+        <MetadataProvider type="XML" file="spid/dp-intesa.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-infocert.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-namiral.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-poste-italiane.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-register.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-sielte.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-ti-trust-technologies.xml"/>
+        <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
+        <AttributeResolver type="Query" subjectMatch="true"/>
+        <CredentialResolver type="File" key="cert/sp.example.org.key" certificate="cert/sp.example.org.crt"/>
+    </ApplicationDefaults>
+    <SecurityPolicyProvider type="XML" validate="true" path="security-policy.xml"/>
+    <ProtocolProvider type="XML" validate="true" reloadChanges="false" path="protocols.xml"/>
+</SPConfig>

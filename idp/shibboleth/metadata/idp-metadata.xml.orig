@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor 
+    xmlns="urn:oasis:names:tc:SAML:2.0:metadata" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" 
+    xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" 
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" 
+    xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://idp.example.org/idp/shibboleth">
+    <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <Extensions>
+            <shibmd:Scope regexp="false">example.org</shibmd:Scope>
+        </Extensions>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDETCCAfmgAwIBAgIVAPPG37K50pbHVF5Sc8ehToZpQIV/MA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzAeFw0xODAxMDIxMjM1NDha
+Fw0zODAxMDIxMjM1NDhaMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAI8DTwo4vdco8Zs44ejFP5DxC4bR
+yvsxVZQZcXL7odb7PQ3KHCeCH2mz4jG8xSINYQ9HiQxR3Xus6U5myxyEnrFLLDA/
+kpEKRX75+roshuupCU77mT2XxZyevOeP/irzcmdKy+cAZR3vdFmT1r69sH2aqJqU
+DgLLhP4T2qI2RViyCOXbKdjGC5Ec6f0ymCIOOAP958cpbOGB1dSeWZzdqxX5BdsP
+ciywvsCfQV58KzNv6rzPmvxnqwBt0OycuyJV/+hjNAi2BnGnmA0yDHp29am6C0u1
+jma4ZX7bK9TPRhxUNJYgNy1+ZCNQOZhe3IIjWhysgCuyV7jXQ3pTCTJlvW0CAwEA
+AaNOMEwwHQYDVR0OBBYEFMy8vJ4lb6E/CVSmF68UqMbkN2iQMCsGA1UdEQQkMCKC
+D2lkcC5leGFtcGxlLm9yZ4YPaWRwLmV4YW1wbGUub3JnMA0GCSqGSIb3DQEBCwUA
+A4IBAQA5V4F0Q254FKaq5RPI3iUCZYF9Zb4e1fcg4IcmgqkQvSIrZda+39HTqYCd
+3MAY+/pz9Z7OeaSJ9fjqXmbNe9dk9Sl714qmlhR9UW/Y7VCHjuPmwoapGhCliwnb
+VQxRvnE96SELV7fN0bz0ZlnZ65+ufHnlnKCwRagArUtpv1639fDV/wtckBItUARF
+IBXlD2tE9r6w4NxqyjLZ09ObW+jL7frIIjw/w0DGVepigL/ws2xLtJRYrxide+N1
+yGm+g3w8Jh6BwcTSV8SaMXH2Sqe11FelNQsQmsGTe+UJvN2akUNdVNyI2xfcIzZ/
+UmUob76bj+bXBHuQnwNUCvpSuFrD
+                        </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDETCCAfmgAwIBAgIVAJ4mKChiQtsL55rGz/iU7B0cWYNoMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzAeFw0xODAxMDIxMjM1NDha
+Fw0zODAxMDIxMjM1NDhaMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAIFopAzooj1X2g5wqxlyL9M1rr06
+ps6tiaP9FqcEdnkrycpGyo4F/dJawuhLCqdwsY8pN08atrOnJL91lFdkHyoZ/oCB
+CfsfmG9+e0rEd6iLevgJQ14yPtwSUegZi6zFTmGOCmSfP1lFYgP3GBZmCEajvwOA
+pLYyZXdV3kvaJmbab+qlxNZsrJjYXzqfo+uhHPmdlQvx/9qYXI0GyWB+rKk4sW05
+E6dxjkgkoeorARcyU8zM2IojuNF7dGksj1PSrbxyfBMBf/FdrZ20Lj2uTSUsO58D
+bpJYM9kRcPSQKTkwUYDZIdE1j4MHEJUk6+W9MvvsMobzTWnJTXqKETtpOA8CAwEA
+AaNOMEwwHQYDVR0OBBYEFME98I6gzolyDIiD8wGL2Od4BHP2MCsGA1UdEQQkMCKC
+D2lkcC5leGFtcGxlLm9yZ4YPaWRwLmV4YW1wbGUub3JnMA0GCSqGSIb3DQEBCwUA
+A4IBAQBxX9exZi05hzewGKtXm7SdqQtEjdsQz7zo1C9bxJkjUbH38MRewwVu0QzP
+hxQuMS3B8kiTu1S3ckK/ZS3wh2C4r9eufiyzSepVjuGrkc3QQ6VR7+lq1Nx6xuJ0
+yZMH76CZWmjqIz1wgTuqqHSSnZZrzU4OkNZQ16qPpmUiAhvTlsYmQwtAadpWuJdL
+sibbSzScYNJ4qKvWN98k5jjXx5/EdDiwy1k6kweJvXjC8P6sBxXMy77U4cfNUg0I
+9xvGcqt/gSWBtv/9cx2V/vRYNgV8OHJop6x+3L5HtHJhe2AGPLplFP4uOJFiWkN6
+kEQVCvV7Xh77XnN3c/AmUESWsgp9
+                        </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        <KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDETCCAfmgAwIBAgIVAOFGIOzbNIh3OM6XwHn6I++926fzMA0GCSqGSIb3DQEB
+CwUAMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzAeFw0xODAxMDIxMjM1NDha
+Fw0zODAxMDIxMjM1NDhaMBoxGDAWBgNVBAMMD2lkcC5leGFtcGxlLm9yZzCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANBMN+pKpuiKZvjHRoq8jF1d7aZW
+5Bm+G0XBIiHSGv7SO9bo4n8827Npg3gxgh91eEuIR1w90oaQvXLVQEubi1cEpUMz
+2NES6rGlacxrImU5OElMdZKSL50Rn8WSbdJvI6L3aGmVESlOBcXBETLGPy4xSWZq
+AuGeG0ekxrUGQiO08a7JL6OsZRn2D6JndKsRE6WMMb4M6JZWbOgF9lVVT16uegHM
+kkTXJgih9J6zGCPIhCApr6KgnuQeAskRKLIU+WmWsW7bvReeLhMvyv4l7hCl4Bcz
+0ogdXKPEymeK0q0iqGwNKAyvbVMUOPIG4MIT45mCz1dfRfoo4YjyeLumPw8CAwEA
+AaNOMEwwHQYDVR0OBBYEFHcYYAL1rOQNnuiXxN/bIV3vAu7FMCsGA1UdEQQkMCKC
+D2lkcC5leGFtcGxlLm9yZ4YPaWRwLmV4YW1wbGUub3JnMA0GCSqGSIb3DQEBCwUA
+A4IBAQChHBXpKpPNN6A8sUGkhu2LBovMWV3GguooYyc812ggXWwAHwS9ZNBJE0gI
+AwpECt+SC/wC21SqNkXRWyYQfkHxgKyAzDVIvH1iUPiRDQ+uu8YjDLZ0hsvaSDP1
+d0decBmu1aAd33D5YNvzBuJMzdwBZKEQ25UT1AIp3lQqMUWW8RkfVokJIOIMlWBd
+fw6ODVgVrIep6D8whxrlEEZMUUhqpmUYoV/SOWNXihWOamWp8T6qO7/23e82P0dv
+HSIlDWJV2j8MOgIQ5xiOSRXkpOMGlvQhCnOLfnC7+KeOTYRbAElFfY9HaPkA3FHB
+JoXMQN3OwqXUFUqD4E69461B/5iD
+                        </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.org/idp/profile/SAML2/POST/SLO"/>
+		<!--<SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.org/idp/profile/SAML2/Redirect/SSO"/>-->
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.example.org/idp/profile/SAML2/POST/SSO"/>
+        <!--<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.example.org/idp/profile/SAML2/Redirect/SSO"/>-->
+		<saml2:Attribute FriendlyName="Codice identificativo SPID" Name="spidCode" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Nome" Name="name" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Cognome" Name="familyName" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Luogo di nascita" Name="placeOfBirth" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Provincia di nascita" Name="countyOfBirth" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Data di nascita" Name="dateOfBirth" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Sesso" Name="gender" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Ragione o denominazione sociale" Name="companyName" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Sede legale" Name="registeredOffice" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Codice fiscale" Name="fiscalNumber" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Partita IVA" Name="ivaCode" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Documento d'identità" Name="idCard" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Numero di telefono mobile" Name="mobilePhone" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Indirizzo di posta elettronica" Name="email" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Domicilio fisico" Name="address" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Data di scadenza identità" Name="expirationDate" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+		<saml2:Attribute FriendlyName="Domicilio digitale" Name="digitalAddress" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion"/>
+    </IDPSSODescriptor>
+</EntityDescriptor>

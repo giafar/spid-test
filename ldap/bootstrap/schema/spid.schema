@@ -1,0 +1,95 @@
+attributetype ( 2.25.1 NAME 'spidCode'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.2 NAME 'familyName'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.3 NAME 'placeOfBirth'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.4 NAME 'gender'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1}
+	USAGE userApplications )
+attributetype ( 2.25.5 NAME 'companyName'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.6 NAME 'registeredOffice'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.7 NAME 'fiscalNumber'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.8 NAME 'ivaCode'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.9 NAME 'idCard'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.10 NAME 'mobilePhone'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.11 NAME 'address'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.12 NAME 'expirationDate'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.13 NAME 'digitalAddress'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.14 NAME 'countyOfBirth'
+	DESC ''
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256}
+	USAGE userApplications )
+attributetype ( 2.25.15 NAME 'dateOfBirth'
+	EQUALITY generalizedTimeMatch 
+	ORDERING generalizedTimeOrderingMatch 
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.24 SINGLE-VALUE 
+	USAGE userApplications )
+objectclass ( 2.25 NAME 'spidObject'
+	DESC ''
+	SUP inetOrgPerson
+	STRUCTURAL
+	MUST spidCode
+	MAY ( name $ mobilePhone $ digitalAddress $ expirationDate $ address $ email $ familyName $ placeOfBirth $ countyOfBirth $ dateOfBirth $ gender $ companyName $ registeredOffice $ fiscalNumber $ ivaCode $ idCard ) )

@@ -1,0 +1,1 @@
+https://wiki.shibboleth.net/confluence/display/IDP30/ConfigurationFileSummary

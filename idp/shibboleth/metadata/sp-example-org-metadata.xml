@@ -1,0 +1,158 @@
+<!--
+This is example metadata only. Do *NOT* supply it as is without review,
+and do *NOT* provide it in real time to your partners.
+ -->
+<md:EntityDescriptor 
+  xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_546035e09b23679deda645b0688d0d17a2d0ef81" entityID="https://sp.example.org/saml/sp" 
+  xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+  <ds:Signature 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+    <ds:SignedInfo>
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+      <ds:Reference URI="#_546035e09b23679deda645b0688d0d17a2d0ef81">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+          <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+        <ds:DigestValue>sa1iskSErxY3DNYAoogeMms/Zbp3AyKN8IiJ9l72L6Y=</ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue>pEHZpFjj2Hj4EMFE3eOeGfHsgeRf6Ml+dnUoDjK+KdK8XbLufM9I0T7NVm2PSg91 6rfpVZgaw5iZmY++kstRSMATTFb3tERo7xRNZl5SuvwDy2hxjCqTuEaBMScfpPsp a4+iKBRc+6Lh/la0/zseAoELbOgGFGNa22RpNET73oczC11UrpFGvWO4q6Asb2Z8 Uwft8oukuy+72q+w29QN77WVlnHuFrAnR+MFFlNqoO2UWObshtPtSfqdu5sEshcu z3G0Rs1X2GwCmJIMj5RSwZsJJ7L+hjBO4maQup+sTElzEXSRrGVdNcogybQhyqU+ OogFlLYijGAWHIeNQ6mBMw==</ds:SignatureValue>
+    <ds:KeyInfo>
+      <ds:KeyName>sp.example.org</ds:KeyName>
+      <ds:X509Data>
+        <ds:X509SubjectName>CN=sp.example.org,OU=Test,O=Test Shibboleth,L=Roma,ST=Italia,C=IT</ds:X509SubjectName>
+        <ds:X509Certificate>MIIDUDCCAjgCCQDZCqTq9PxalzANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJJ
+VDEPMA0GA1UECAwGSXRhbGlhMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9UZXN0
+IFNoaWJib2xldGgxDTALBgNVBAsMBFRlc3QxDTALBgNVBAMMBFRlc3QwHhcNMTcx
+MjI5MTQ1NTI2WhcNMTkwNTEzMTQ1NTI2WjBvMQswCQYDVQQGEwJJVDEPMA0GA1UE
+CAwGSXRhbGlhMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9UZXN0IFNoaWJib2xl
+dGgxDTALBgNVBAsMBFRlc3QxFzAVBgNVBAMMDnNwLmV4YW1wbGUub3JnMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxerukal82KtS9f/zZmQ9ojfEP+gw
+shv1S4HuWLXu81Y55RjX//SpvehJYIwAsXqTkGyHJ1Azi8bz2HZo3+zpphvDXYX8
+APX17+XEcPszaNGvY+LMEhZbsw/3X9iVW3/eNppy7KJi8LrcFo0Xid8oDQN+p2Ix
+lpdWZOSKYDA9U4r43BnYzSRFkIkgCFJE0nGJKBLRCGIBl1onSz/6mQYKIrZodmhR
+jlxDFDoHZLLVv7pact75idWSvR8UnA/vd//QoraCEB7sSLj5C0u4aeKTmMI3U84s
+eIYE4tNAmiFfvvU37mmmtaG/7ddIhC9CakVo7gwlxzTyCR9EBlD9miCnJQIDAQAB
+MA0GCSqGSIb3DQEBCwUAA4IBAQBZVIIv8Ngabu0pNuvk6gVZpq8/r7KKue+ICcR5
+x9LIf+sKPOllvEvL17iFhG2ggNzYIa4mxpM6EJV9ZqGAZhXTSrO+7fg5bNEPPtZ8
+pbFxlUWXSBVoSaH2SwHMUIbjZPf5poPom7AInuEHIaKqbJkQ7vERGarxCZ01Jens
+hNL6463qG+dvmIKn4ydu7tSNQei4ZoKbMgFMFsjEOWr4CWyEivXcoFGKDMDWpFx6
+38tHq5M/tGc0Vvlx/kuIvj9a/k1ku06w98fcxPScB1V3pwc9eCpnGornoDhljfiO
+klEP51sP3GDRcceIsRupEmLZCQc784boU2E7doA4+2lkAmYE
+</ds:X509Certificate>
+      </ds:X509Data>
+    </ds:KeyInfo>
+  </ds:Signature>
+  <md:Extensions 
+    xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha384"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#sha224"/>
+    <alg:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha224"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha384"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2009/xmldsig11#dsa-sha256"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <alg:SigningMethod Algorithm="http://www.w3.org/2000/09/xmldsig#dsa-sha1"/>
+  </md:Extensions>
+  <md:SPSSODescriptor AuthnRequestsSigned="1" WantAssertionsSigned="1" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+    <md:Extensions>
+      <init:RequestInitiator 
+        xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://sp.example.org/saml/Login"/>
+    </md:Extensions>
+    <md:KeyDescriptor>
+      <ds:KeyInfo>
+        <ds:KeyName>sp.example.org</ds:KeyName>
+        <ds:X509Data>
+          <ds:X509SubjectName>CN=sp.example.org,OU=Test,O=Test Shibboleth,L=Roma,ST=Italia,C=IT</ds:X509SubjectName>
+          <ds:X509Certificate>MIIDUDCCAjgCCQDZCqTq9PxalzANBgkqhkiG9w0BAQsFADBlMQswCQYDVQQGEwJJ
+VDEPMA0GA1UECAwGSXRhbGlhMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9UZXN0
+IFNoaWJib2xldGgxDTALBgNVBAsMBFRlc3QxDTALBgNVBAMMBFRlc3QwHhcNMTcx
+MjI5MTQ1NTI2WhcNMTkwNTEzMTQ1NTI2WjBvMQswCQYDVQQGEwJJVDEPMA0GA1UE
+CAwGSXRhbGlhMQ0wCwYDVQQHDARSb21hMRgwFgYDVQQKDA9UZXN0IFNoaWJib2xl
+dGgxDTALBgNVBAsMBFRlc3QxFzAVBgNVBAMMDnNwLmV4YW1wbGUub3JnMIIBIjAN
+BgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxerukal82KtS9f/zZmQ9ojfEP+gw
+shv1S4HuWLXu81Y55RjX//SpvehJYIwAsXqTkGyHJ1Azi8bz2HZo3+zpphvDXYX8
+APX17+XEcPszaNGvY+LMEhZbsw/3X9iVW3/eNppy7KJi8LrcFo0Xid8oDQN+p2Ix
+lpdWZOSKYDA9U4r43BnYzSRFkIkgCFJE0nGJKBLRCGIBl1onSz/6mQYKIrZodmhR
+jlxDFDoHZLLVv7pact75idWSvR8UnA/vd//QoraCEB7sSLj5C0u4aeKTmMI3U84s
+eIYE4tNAmiFfvvU37mmmtaG/7ddIhC9CakVo7gwlxzTyCR9EBlD9miCnJQIDAQAB
+MA0GCSqGSIb3DQEBCwUAA4IBAQBZVIIv8Ngabu0pNuvk6gVZpq8/r7KKue+ICcR5
+x9LIf+sKPOllvEvL17iFhG2ggNzYIa4mxpM6EJV9ZqGAZhXTSrO+7fg5bNEPPtZ8
+pbFxlUWXSBVoSaH2SwHMUIbjZPf5poPom7AInuEHIaKqbJkQ7vERGarxCZ01Jens
+hNL6463qG+dvmIKn4ydu7tSNQei4ZoKbMgFMFsjEOWr4CWyEivXcoFGKDMDWpFx6
+38tHq5M/tGc0Vvlx/kuIvj9a/k1ku06w98fcxPScB1V3pwc9eCpnGornoDhljfiO
+klEP51sP3GDRcceIsRupEmLZCQc784boU2E7doA4+2lkAmYE
+</ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes128-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes192-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#aes256-gcm"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes128-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes192-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
+      <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
+    </md:KeyDescriptor>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://sp.example.org/saml/SLO/SOAP"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.org/saml/SLO/POST"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp.example.org/saml/SLO/REDIRECT"/>
+    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.org/saml/SAML2/POST" index="0"/>
+    <md:AttributeConsumingService index="0">
+      <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
+      <md:RequestedAttribute Name="spidCode"/>
+      <md:RequestedAttribute Name="name"/>
+      <md:RequestedAttribute Name="familyName"/>
+      <md:RequestedAttribute Name="fiscalNumber"/>
+    </md:AttributeConsumingService>
+    <md:AttributeConsumingService index="1">
+      <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
+      <md:RequestedAttribute Name="spidCode"/>
+      <md:RequestedAttribute Name="name"/>
+      <md:RequestedAttribute Name="familyName"/>
+      <md:RequestedAttribute Name="placeOfBirth"/>
+      <md:RequestedAttribute Name="countyOfBirth"/>
+      <md:RequestedAttribute Name="dateOfBirth"/>
+      <md:RequestedAttribute Name="gender"/>
+      <md:RequestedAttribute Name="fiscalNumber"/>
+      <md:RequestedAttribute Name="idCard"/>
+      <md:RequestedAttribute Name="mobilePhone"/>
+      <md:RequestedAttribute Name="email"/>
+      <md:RequestedAttribute Name="digitalAddress"/>
+    </md:AttributeConsumingService>
+    <md:AttributeConsumingService index="2">
+      <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
+      <md:RequestedAttribute Name="spidCode"/>
+      <md:RequestedAttribute Name="name"/>
+      <md:RequestedAttribute Name="familyName"/>
+      <md:RequestedAttribute Name="fiscalNumber"/>
+      <md:RequestedAttribute Name="companyName"/>
+      <md:RequestedAttribute Name="ivaCode"/>
+    </md:AttributeConsumingService>
+    <md:AttributeConsumingService index="3">
+      <md:ServiceName xml:lang="it">Set Attributi 4 - ID Persone giuridiche</md:ServiceName>
+      <md:RequestedAttribute Name="spidCode"/>
+      <md:RequestedAttribute Name="companyName"/>
+      <md:RequestedAttribute Name="registeredOffice"/>
+      <md:RequestedAttribute Name="ivaCode"/>
+    </md:AttributeConsumingService>
+  </md:SPSSODescriptor>
+  <md:Organization>
+    <md:OrganizationName xml:lang="it">Example</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="it">Example</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="it">www.example.org</md:OrganizationURL>
+  </md:Organization>
+</md:EntityDescriptor>
