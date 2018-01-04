@@ -17,18 +17,22 @@ The password is **password.1** for all users.
 ### Building the image
 To build the image:
 ```
-docker build -t giafar/openldap .
+docker build -t giafar/spid-ldap .
 ```
-if you change the tag *giafar/openldap* please remember to modify the docker-compose.yml file as well.
-
+if you change the tag *giafar/spid-ldap* please remember to modify the docker-compose.yml file as well.
+### From docker hub
+To download the image from docker hub
+```
+docker pull giafar/spid-ldap
+```
 ### Running the image
-To run the image in interactive mode and expose the LDAP protocolo:
+To run the image in interactive mode and expose the LDAP protocol:
 ```
-docker run -it --name spid-ldap -p 389:389 giafar/openldap
+docker run -it --name spid-ldap -p 389:389 giafar/spid-ldap
 ```
 or in detach mode
 ```
-docker run -d --name spid-ldap -p 389:389 giafar/openldap
+docker run -d --name spid-ldap -p 389:389 giafar/spid-ldap
 ```
 To look at the logs in detached mode
 ```

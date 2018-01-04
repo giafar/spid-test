@@ -8,16 +8,20 @@ To build the image:
 ```
 docker build -t giafar/shibboleth-idp .
 ```
-if you change the tag *giafar/shibboleth-idp* please remember to modify the docker-compose.yml file as well.
-
+if you change the tag *giafar/spid-idp* please remember to modify the docker-compose.yml file as well.
+### From docker hub
+To download the image from docker hub
+```
+docker pull giafar/spid-idp
+```
 ### Running the image
 To run the image in interactive mode and expose the LDAP protocolo:
 ```
-docker run -it --name spid-idp -p 443:443 giafar/shibboleth-idp
+docker run -it --name spid-idp -p 443:443 giafar/spid-idp
 ```
 or in detach mode
 ```
-docker run -d --name spid-idp -p 443:443 giafar/shibboleth-idp
+docker run -d --name spid-idp -p 443:443 giafar/spid-idp
 ```
 To look at the logs in detached mode
 ```
@@ -30,8 +34,8 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' spi
 ### Running the image with the LDAP backend
 The image uses the *giafar/openldap* backend for user authentication and expects the directory service is located at ldap.example.org
 ```
-docker run -d --rm --name spid-ldap giafar/openldap
-docker run -d --rm --name spid-idp --link=spid-ldap:ldap.example.org giafar/shibboleth-idp
+docker run -d --rm --name spid-ldap giafar/spid-ldap
+docker run -d --rm --name spid-idp --link=spid-ldap:ldap.example.org giafar/spid-idp
 ```
 Shibboleth logs **are not** redirected to the standard docker log so if you wanna follow this kind of log
 ```

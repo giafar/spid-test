@@ -16,15 +16,23 @@ The project aims to create a testing environment for the Italian public identity
 ### Building the images
 To build the images:
 ```
-cd ldap && docker build -t giafar/openldap . && cd ..
-cd idp && docker build -t giafar/shibboleth-idp . && cd ..
-cd sp && docker build -t giafar/shibboleth-sp . && cd ..
+cd ldap && docker build -t giafar/spid-ldap . && cd ..
+cd idp && docker build -t giafar/spi-idp . && cd ..
+cd sp && docker build -t giafar/spid-sp . && cd ..
 ```
-services are related each other so is important to start them in the right order with the correct name
+### From docker hub
+To download the images from docker hub
 ```
-docker run -d --rm --name spid-ldap giafar/openldap
-docker run -d --rm --name spid-idp --link=spid-ldap:ldap.example.org giafar/shibboleth-idp
-docker run -d --rm --name spid-sp --link=spid-idp:idp.example.org giafar/shibboleth-sp
+docker pull giafar/spid-ldap
+docker pull giafar/spid-idp
+docker pull giafar/spid-sp
+```
+### Running the images
+services are related each othe, it is important to start them in the right order with the correct name
+```
+docker run -d --rm --name spid-ldap giafar/spid-ldap
+docker run -d --rm --name spid-idp --link=spid-ldap:ldap.example.org giafar/spid-idp
+docker run -d --rm --name spid-sp --link=spid-idp:idp.example.org giafar/spid-sp
 ```
 As you can notice no port is exposed and images are linked by fqdn:
 1. ldap.example.org;
@@ -36,9 +44,7 @@ Modify the host file to include required fqnd or run the following script
 
 ```
 echo "$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' spid-sp) sp.example.org" | sudo tee --append /etc/hosts > /dev/null
-
 echo "$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' spid-idp) idp.example.org" | sudo tee --append /etc/hosts > /dev/null
-
 echo "$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' spid-ldap) ldap.example.org" | sudo tee --append /etc/hosts > /dev/null
 
 ```
