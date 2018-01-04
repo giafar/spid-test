@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends vim curl && \
 ADD https://shibboleth.net/downloads/identity-provider/3.3.2/shibboleth-identity-provider-3.3.2.tar.gz ${TMPDIR}/
 COPY ./tomcat/ /usr/local/tomcat/
 
-RUN cd ${TMPDIR} && tar xzf shibboleth-identity-provider-3.3.2.tar.gz
+#RUN cd ${TMPDIR} && tar xzf shibboleth-identity-provider-3.3.2.tar.gz
+RUN cd ${TMPDIR}
 
 COPY ./shibboleth/ ${TMPDIR}/shibboleth-identity-provider-3.3.2/
 
