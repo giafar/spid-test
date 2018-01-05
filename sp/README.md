@@ -53,6 +53,13 @@ docker container stop spid-ldap
 
 *TODO*
 
+### Deploy SP metadata
+If you modify SP metadata configuration remember to update the sp-example-org-metadata.xml which is inside the idp/shibboleth/metadata folder.
+On a running giafar/spid-sp container run the following command and rebuild the spid-idp image
+```
+curl -k -o <idp home folder>/shibboleth/metadata/sp-example-org-metadata.xml https://sp.example.org/saml/Metadata
+```
+Remember to edit the file host including the correct IP Address for sp.example.org
 ## Apache customization
 
 *TODO*
