@@ -15,6 +15,8 @@
         <RequestMap applicationId="default">
             <Host name="sp.example.org" redirectToSSL="443">
                 <Path name="secure" authType="shibboleth" requireSession="true" exportAssertion="true"/>
+                <Path name="secure-spidl1" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1"/>
+                <Path name="secure-spidl2" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2"/>
             </Host>
         </RequestMap>
     </RequestMapper>
