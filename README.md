@@ -48,6 +48,12 @@ echo "$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{en
 echo "$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' spid-ldap) ldap.example.org" | sudo tee --append /etc/hosts > /dev/null
 
 ```
+To stop everything
+```
+docker container stop spid-sp
+docker container stop spid-idp
+docker container stop spid-ldap
+```
 
 ## Playing with the images
 
