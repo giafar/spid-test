@@ -1,48 +1,54 @@
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="shibbolethsp.ednxs.priv">
-  <md:SPSSODescriptor WantAssertionsSigned="true" AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-    <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
-    <md:AttributeConsumingService index="0">
-        <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
-        <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-        <md:RequestedAttribute Name="name" isRequired="true"/>
-        <md:RequestedAttribute Name="familyName" isRequired="true"/>
-        <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-    </md:AttributeConsumingService>
-    <md:AttributeConsumingService index="1">
-        <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
-        <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-        <md:RequestedAttribute Name="name" isRequired="true"/>
-        <md:RequestedAttribute Name="familyName" isRequired="true"/>
-        <md:RequestedAttribute Name="placeOfBirth" isRequired="true"/>
-        <md:RequestedAttribute Name="countyOfBirth" isRequired="true"/>
-        <md:RequestedAttribute Name="dateOfBirth" isRequired="true"/>
-        <md:RequestedAttribute Name="gender" isRequired="true"/>
-        <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-        <md:RequestedAttribute Name="idCard" isRequired="true"/>
-        <md:RequestedAttribute Name="mobilePhone" isRequired="true"/>
-        <md:RequestedAttribute Name="email" isRequired="true"/>
-        <md:RequestedAttribute Name="digitalAddress" isRequired="true"/>
-    </md:AttributeConsumingService>
-    <md:AttributeConsumingService index="2">
-        <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
-        <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-        <md:RequestedAttribute Name="name" isRequired="true"/>
-        <md:RequestedAttribute Name="familyName" isRequired="true"/>
-        <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-        <md:RequestedAttribute Name="companyName" isRequired="true"/>
-        <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
-    </md:AttributeConsumingService>
-    <md:AttributeConsumingService index="3">
-        <md:ServiceName xml:lang="it">Set Attributi 4 - ID Persone giuridiche</md:ServiceName>
-        <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-        <md:RequestedAttribute Name="companyName" isRequired="true"/>
-        <md:RequestedAttribute Name="registeredOffice" isRequired="true"/>
-        <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
-    </md:AttributeConsumingService>
-  </md:SPSSODescriptor>
- <md:Organization>
+<md:EntityDescriptor 
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" 
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="shibbolethsp.ednxs.priv">
+    <md:SPSSODescriptor WantAssertionsSigned="true" AuthnRequestsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:AttributeConsumingService index="0">
+            <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
+            <md:RequestedAttribute Name="name" isRequired="true"/>
+            <md:RequestedAttribute Name="familyName" isRequired="true"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
+        </md:AttributeConsumingService>
+        <md:AttributeConsumingService index="1">
+            <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
+            <md:RequestedAttribute Name="name" isRequired="true"/>
+            <md:RequestedAttribute Name="familyName" isRequired="true"/>
+            <md:RequestedAttribute Name="placeOfBirth" isRequired="true"/>
+            <md:RequestedAttribute Name="countyOfBirth" isRequired="true"/>
+            <md:RequestedAttribute Name="dateOfBirth" isRequired="true"/>
+            <md:RequestedAttribute Name="gender" isRequired="true"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
+            <md:RequestedAttribute Name="idCard" isRequired="true"/>
+            <md:RequestedAttribute Name="mobilePhone" isRequired="true"/>
+            <md:RequestedAttribute Name="email" isRequired="true"/>
+            <md:RequestedAttribute Name="digitalAddress" isRequired="true"/>
+        </md:AttributeConsumingService>
+        <md:AttributeConsumingService index="2">
+            <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
+            <md:RequestedAttribute Name="name" isRequired="true"/>
+            <md:RequestedAttribute Name="familyName" isRequired="true"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
+            <md:RequestedAttribute Name="companyName" isRequired="true"/>
+            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+        </md:AttributeConsumingService>
+        <md:AttributeConsumingService index="3">
+            <md:ServiceName xml:lang="it">Set Attributi 4 - ID Persone giuridiche</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
+            <md:RequestedAttribute Name="companyName" isRequired="true"/>
+            <md:RequestedAttribute Name="registeredOffice" isRequired="true"/>
+            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+        </md:AttributeConsumingService>
+    </md:SPSSODescriptor>
+    <md:Organization>
         <md:OrganizationName xml:lang="it">Example</md:OrganizationName>
         <md:OrganizationDisplayName xml:lang="it">Example</md:OrganizationDisplayName>
         <md:OrganizationURL xml:lang="it">www.example.org</md:OrganizationURL>
- </md:Organization>
+    </md:Organization>
+    <md:ContactPerson contactType="support">
+        <md:GivenName>Fares Gianluca</md:GivenName>
+        <md:EmailAddress>gfares@indracompany.com</md:EmailAddress>
+    </md:ContactPerson>
 </md:EntityDescriptor>
