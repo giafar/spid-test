@@ -2,14 +2,14 @@ version: '2.1'
 services:
 
   ldap:
-    image: giafar/openldap
+    image: giafar/spid-ldap
     container_name: ldap.example.org
     networks:
       shibboleth-net:
         ipv4_address: 172.20.0.2
 
   shibboleth-idp:
-    image: giafar/shibboleth-idp
+    image: giafar/spid-idp
     container_name: idp.example.org
     depends_on:
       - ldap
@@ -20,7 +20,7 @@ services:
         ipv4_address: 172.20.0.3
 
   shibboleth-sp:
-    image: giafar/shibboleth-sp
+    image: giafar/spid-sp
     container_name: sp.example.org
     depends_on:
       - shibboleth-idp
