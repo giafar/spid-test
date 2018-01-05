@@ -21,18 +21,17 @@ SPID - SISTEMA PUBBLICO PER L'IDENTITA' DIGITALE
     <!-- AGID - SPID IDP BUTTON SMALL "ENTRA CON SPID" * begin * -->
     <form name="spid_idp_access" action="/saml/Login" method="post">
         <input type="hidden" name="target" id="sp-target" value="" />
-        <input type="hidden" name="entityID" id="sp-entityID" value="" />
-        Select authnContextClassRef to use <select name="authnContextClassRef">
+        <input type="hidden" name="entityID" id="sp-entityID" value="" /> Select authnContextClassRef to use
+        <select name="authnContextClassRef">
             <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1">SpidL1</option>
             <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2">SpidL2</option>
-            <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL3">SpidL3</option>
-        </select>
+            <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL3">SpidL3 - Not implemented</option>
+        </select>        
         <br/>
         <a href="#" class="italia-it-button italia-it-button-size-s button-spid" spid-idp-button="#spid-idp-button-small-post" aria-haspopup="true"
             aria-expanded="false">
             <span class="italia-it-button-icon">
-                <img src="/img/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt=""
-                />
+                <img src="/img/spid-ico-circle-bb.svg" onerror="this.src='img/spid-ico-circle-bb.png'; this.onerror=null;" alt="" />
             </span>
             <span class="italia-it-button-text">Entra con SPID</span>
         </a>
@@ -83,8 +82,8 @@ SPID - SISTEMA PUBBLICO PER L'IDENTITA' DIGITALE
                 <li class="spid-idp-button-link" data-idp="https://spid.register.it">
                     <button class="idp-button-idp-logo" name="spiditalia" type="submit">
                         <span class="spid-sr-only">SPIDItalia Register.it</span>
-                        <img class="spid-idp-button-logo" src="/img/spid-idp-spiditalia.svg"
-                            onerror="this.src='img/spid-idp-spiditalia.png'; this.onerror=null;" alt="SpidItalia" />
+                        <img class="spid-idp-button-logo" src="/img/spid-idp-spiditalia.svg" onerror="this.src='img/spid-idp-spiditalia.png'; this.onerror=null;"
+                            alt="SpidItalia" />
                     </button>
                 </li>
                 <li class="spid-idp-button-link" data-idp="https://login.id.tim.it/affwebservices/public/saml2sso">
