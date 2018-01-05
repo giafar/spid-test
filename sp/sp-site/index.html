@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <!--#include file="template/header.html" -->
+    <!--#include virtual="/template/header.html" -->
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
         <h1 class="bd-title">SPID Test Site</h1>
         <p class="bd-lead">
@@ -18,13 +18,27 @@
         </p>
         <ul class="list-group">
             <li class="list-group-item">
-                <p class="bd-lead"><strong>Check shibboleth native access control with default entityID</strong></p>
-                The <em>/secure</em> location is protected by shibboleth native configuration and if no session is present then you will be redirected to the identity provider for authentication. Use test as username and password.1 as password to login and return to sp /secure page.
+                <p class="bd-lead">
+                    <strong>Check shibboleth native access control with default entityID</strong>
+                </p>
+                The
+                <em>/secure</em> location is protected by shibboleth native configuration and if no session is present then you
+                will be redirected to the identity provider for authentication. Use test as username and password.1 as password
+                to login and return to sp /secure page.
                 <a href="/secure">Test</a>
             </li>
             <li class="list-group-item">
                 <p class="bd-lead">Check apache control by cookie test. Redirect to SPID provider selector</p>
-                The <em>/secure-spidl1</em> location is protected by apache: if the shibboleth cookie session is not present then the browser is redirected to a login page which contains the standard SPID button. The user can select which level of security wants to apply. <a href="/secure-spidl1">Test
+                The
+                <em>/secure-by-apache</em> location is protected by apache: if the shibboleth cookie session is not present then
+                the browser is redirected to a login page which contains the standard SPID button. The user can select which
+                level of security wants to apply.
+                <a href="/secure-by-apache">Test
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/secure-spidl1">Check shibboleth native access control with default entityID and forced SpidL1 authnContextClassRef by request
+                    mapper
                 </a>
             </li>
             <li class="list-group-item">
