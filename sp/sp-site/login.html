@@ -9,11 +9,13 @@ SPID - SISTEMA PUBBLICO PER L'IDENTITA' DIGITALE
     <title>SPID SP ACCESS BUTTON</title>
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="/css/spid-sp-access-button.min.css" />
+    <link rel="stylesheet" href="/bootstrap-italia-master/dist/css/bootstrap-italia-0.0.1.css" crossorigin="anonymous">
+    <script src="/bootstrap-italia-master/dist/js/bootstrap-italia-0.0.1.bundle.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-
+    <!--#include file="template/header.html" -->
     <h1 style="font-family:'Titillium Web',HelveticaNeue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-weight:700">SPID SP ACCESS BUTTON</h1>
 
     <h3 style="margin-top:40px;font-family:'Titillium Web',HelveticaNeue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-weight:700">Use aruba to test idp.example.org identity provider</h3>
@@ -26,7 +28,7 @@ SPID - SISTEMA PUBBLICO PER L'IDENTITA' DIGITALE
             <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1">SpidL1</option>
             <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2">SpidL2</option>
             <option value="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL3">SpidL3 - Not implemented</option>
-        </select>        
+        </select>
         <br/>
         <a href="#" class="italia-it-button italia-it-button-size-s button-spid" spid-idp-button="#spid-idp-button-small-post" aria-haspopup="true"
             aria-expanded="false">

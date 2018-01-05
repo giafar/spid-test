@@ -4,21 +4,58 @@
 <head>
     <title>SPID Test Site</title>
     <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="/css/spid-sp-access-button.min.css" />
+    <link rel="stylesheet" href="/bootstrap-italia-master/dist/css/bootstrap-italia-0.0.1.css" crossorigin="anonymous">
+    <script src="/bootstrap-italia-master/dist/js/bootstrap-italia-0.0.1.bundle.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <h1 style="font-family:'Titillium Web',HelveticaNeue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;font-weight:700">SPID Test Site</h1>
-    <ol>
-            <li><a href="/secure">Check shibboleth native access control with default entityID</a></li>
-            <li><a href="/secure-spidl1">Check shibboleth native access control with default entityID and forced SpidL1 authnContextClassRef by request mapper</a></li>
-            <li><a href="/secure-spidl2">Check shibboleth native access control with default entityID and forced SpidL2 authnContextClassRef by request mapper</a></li>
-            <li><a href="/secure-spidl1-attr-2">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request mapper and SPID Attributes Set 2</a></li>
-            <li><a href="/secure-spidl1-attr-3">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request mapper and SPID Attributes Set 3</a></li>
-            <li><a href="/secure-spidl1-attr-4">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request mapper and SPID Attributes Set 4</a></li>
-            <li><a href="/secure-by-apache">Check apache control by cookie test. Redirect to SPID provider selector</a></li>
-            <li><a href="/saml/Logout">Logout</a></li>
-            <li><a href="/saml/Session">Session information</a></li>
-            <li><a href="/saml/Metadata">Metadata</a></li>
-        </ol>
+    <!--#include file="template/header.html" -->
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <h1 class="bd-title">SPID Test Site</h1>
+        <p class="bd-lead">
+            This is a Shibboleth Service Provider SPID test site that demonstrates how to customize Shibboleth SP to accomplish the AGID
+            Requirements.
+        </p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <p class="bd-lead"><strong>Check shibboleth native access control with default entityID</strong></p>
+                The <em>/secure</em> location is protected by shibboleth native configuration and if no session is present then you will be redirected to the identity provider for authentication. Use test as username and password.1 as password to login and return to sp /secure page.
+                <a href="/secure">Test</a>
+            </li>
+            <li class="list-group-item">
+                <p class="bd-lead">Check apache control by cookie test. Redirect to SPID provider selector</p>
+                The <em>/secure-spidl1</em> location is protected by apache: if the shibboleth cookie session is not present then the browser is redirected to a login page which contains the standard SPID button. The user can select which level of security wants to apply. <a href="/secure-spidl1">Test
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/secure-spidl2">Check shibboleth native access control with default entityID and forced SpidL2 authnContextClassRef by request
+                    mapper
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a href="/secure-spidl1-attr-2">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request
+                    mapper and SPID Attributes Set 2</a>
+            </li class="list-group-item">
+            <li class="list-group-item">
+                <a href="/secure-spidl1-attr-3">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request
+                    mapper and SPID Attributes Set 3</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/secure-spidl1-attr-4">Check shibboleth native access control with default entityID, forced SpidL1 authnContextClassRef by request
+                    mapper and SPID Attributes Set 4</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/secure-by-apache">Check apache control by cookie test. Redirect to SPID provider selector</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/saml/Logout">Logout</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/saml/Session">Session information</a>
+            </li>
+            <li class="list-group-item">
+                <a href="/saml/Metadata">Metadata</a>
+            </li>
+        </ul>
+    </main>
 </body>
