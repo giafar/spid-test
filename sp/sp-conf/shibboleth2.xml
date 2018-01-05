@@ -35,7 +35,7 @@
             <md:SingleLogoutService Location="/SLO/SOAP" Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"/>
             <md:SingleLogoutService Location="/SLO/POST" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
             <md:SingleLogoutService Location="/SLO/REDIRECT" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
-            <Handler type="MetadataGenerator" Location="/Metadata" signing="true" signingAlg="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" digestAlg="http://www.w3.org/2001/04/xmlenc#sha256"/>
+            <Handler type="MetadataGenerator" Location="/Metadata" signing="true" template="spid-metadata.xml" signingAlg="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" digestAlg="http://www.w3.org/2001/04/xmlenc#sha256"/>
             <Handler type="Status" Location="/Status" acl="0.0.0.0 127.0.0.1 ::1" />
             <Handler type="Session" Location="/Session" showAttributeValues="true"/>
             <Handler type="AttributeChecker" Location="/AttrChecker" template="attrChecker.html" attributes="eppn displayName" flushSession="true"/>

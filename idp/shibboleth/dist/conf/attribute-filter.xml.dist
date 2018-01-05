@@ -1,70 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AttributeFilterPolicyGroup id="ShibbolethFilterPolicy"
-        xmlns="urn:mace:shibboleth:2.0:afp"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:mace:shibboleth:2.0:afp http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
+<AttributeFilterPolicyGroup id="ShibbolethFilterPolicy" 
+    xmlns="urn:mace:shibboleth:2.0:afp" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mace:shibboleth:2.0:afp http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
     <AttributeFilterPolicy id="sharedAttributes">
         <PolicyRequirementRule xsi:type="ANY" />
-        <AttributeRule attributeID="transientId"><PermitValueRule xsi:type="ANY"/></AttributeRule>
-        <AttributeRule attributeID="eduPersonPrincipalName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
+        <AttributeRule attributeID="transientId">
+            <PermitValueRule xsi:type="ANY" />
+        </AttributeRule>
+        <AttributeRule attributeID="eduPersonPrincipalName">
+            <PermitValueRule xsi:type="ANY" />
+        </AttributeRule>
     </AttributeFilterPolicy>
-    <AttributeFilterPolicy id="spidAttribute1">
-        <PolicyRequirementRule xsi:type="Requester" value="https://sp.example.org/saml/sp"/>
-        <AttributeRule attributeID="spidCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="name"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="familyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="fiscalNumber"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-    </AttributeFilterPolicy>
-    <AttributeFilterPolicy id="spidAttribute2">
-        <PolicyRequirementRule xsi:type="Requester" value="https://sp.example.org/saml/sp"/>
-        <AttributeRule attributeID="spidCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="name"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="familyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="placeOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="countyOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="dateOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="gender"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="fiscalNumber"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="idCard"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="mobilePhone"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="email"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="digitalAddress"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-    </AttributeFilterPolicy>
-    <AttributeFilterPolicy id="spidAttribute3">
-        <PolicyRequirementRule xsi:type="Requester" value="https://sp.example.org/saml/sp"/>
-        <AttributeRule attributeID="spidCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="name"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="familyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="companyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="fiscalNumber"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="ivaCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-    </AttributeFilterPolicy>
-    <AttributeFilterPolicy id="spidAttribute4">
-        <PolicyRequirementRule xsi:type="Requester" value="https://sp.example.org/saml/sp"/>
-        <AttributeRule attributeID="spidCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="companyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="registeredOffice"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="ivaCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-    </AttributeFilterPolicy>    
     <AttributeFilterPolicy id="spidAttributeAll">
-        <PolicyRequirementRule xsi:type="Requester" value="https://sp.example.org/saml/sp"/>
-        <AttributeRule attributeID="mail"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="spidCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="name"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="familyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="placeOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="countyOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="dateOfBirth"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="gender"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="companyName"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="registeredOffice"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="fiscalNumber"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="ivaCode"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="idCard"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="mobilePhone"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="email"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="address"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="expirationDate"><PermitValueRule xsi:type="ANY" /></AttributeRule>
-        <AttributeRule attributeID="digitalAddress"><PermitValueRule xsi:type="ANY" /></AttributeRule>
+        <PolicyRequirementRule xsi:type="ANY" />
+        <AttributeRule attributeID="mail">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="spidCode">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="name">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="familyName">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="placeOfBirth">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="countyOfBirth">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="dateOfBirth">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="gender">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="companyName">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="registeredOffice">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="fiscalNumber">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="ivaCode">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="idCard">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="mobilePhone">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="email">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="address">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="expirationDate">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
+        <AttributeRule attributeID="digitalAddress">
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+        </AttributeRule>
     </AttributeFilterPolicy>
 </AttributeFilterPolicyGroup>
