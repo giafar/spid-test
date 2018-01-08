@@ -4,6 +4,8 @@ services:
   ldap:
     image: giafar/spid-ldap
     container_name: ldap.example.org
+    build:
+      context: ../ldap
     networks:
       shibboleth-net:
         ipv4_address: 172.20.0.2
@@ -11,6 +13,8 @@ services:
   shibboleth-idp:
     image: giafar/spid-idp
     container_name: idp.example.org
+    build:
+      context: ../idp
     depends_on:
       - ldap
     links:
@@ -22,6 +26,8 @@ services:
   shibboleth-sp:
     image: giafar/spid-sp
     container_name: sp.example.org
+    build:
+      context: ../sp
     depends_on:
       - shibboleth-idp
     links:
