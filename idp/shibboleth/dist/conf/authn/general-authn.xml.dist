@@ -66,7 +66,7 @@
         <bean id="authn/Password" parent="shibboleth.AuthenticationFlow" p:passiveAuthenticationSupported="true" p:forcedAuthenticationSupported="true">
             <property name="supportedPrincipals">
                 <list>
-                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL1" />
                     <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport" />
                     <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:Password" />
                 </list>
@@ -75,7 +75,7 @@
         <bean id="authn/IPAddress" parent="shibboleth.AuthenticationFlow" p:passiveAuthenticationSupported="true" p:lifetime="PT60S" p:inactivityTimeout="PT60S" p:forcedAuthenticationSupported="true">
             <property name="supportedPrincipals">
                 <list>
-                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL2" />
                     <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocol" />
                 </list>
             </property>
@@ -89,8 +89,10 @@
             -->
             <property name="supportedPrincipals">
                 <list>
-                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1" />                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocol" />
-                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2" />                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocol" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL1" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocol" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL2" />
+                    <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:InternetProtocol" />
                     <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport" />
                     <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:Password" />
                 </list>
@@ -114,13 +116,13 @@
         </entry>
         <entry>
             <key>
-                <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1" />
+                <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL1" />
             </key>
             <value>1</value>
         </entry>
         <entry>
             <key>
-                <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2" />
+                <bean parent="shibboleth.SAML2AuthnContextClassRef" c:classRef="https://www.spid.gov.it/SpidL2" />
             </key>
             <value>2</value>
         </entry>
