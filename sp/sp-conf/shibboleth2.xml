@@ -59,6 +59,7 @@
         <MetadataProvider type="XML" file="spid/idp-register.xml"/>
         <MetadataProvider type="XML" file="spid/idp-sielte.xml"/>
         <MetadataProvider type="XML" file="spid/idp-ti-trust-technologies.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-spid-test.xml"/>
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
         <AttributeResolver type="Query" subjectMatch="true"/>
         <CredentialResolver type="File" key="cert/sp.example.org.key" certificate="cert/sp.example.org.crt"/>
