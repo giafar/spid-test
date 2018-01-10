@@ -25,10 +25,10 @@
     </RequestMapper>
     <ApplicationDefaults id="default" entityID="https://sp.example.org/saml/sp" REMOTE_USER="eppn persistent-id targeted-id" signing="true" encryption="false" attributePrefix="SHIB_">
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-            <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="0">
+            <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
                 <samlp:AuthnRequest 
                     xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
-                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc0" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="0">
+                    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc0" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="1">
                     <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" NameQualifier="https://sp.example.org/saml/sp">https://sp.example.org/saml/sp</saml:Issuer>
                 </samlp:AuthnRequest>
             </SessionInitiator>
@@ -42,33 +42,34 @@
             <Handler type="Status" Location="/Status" acl="0.0.0.0 127.0.0.1 ::1" />
             <Handler type="Session" Location="/Session" showAttributeValues="true"/>
             <Handler type="AttributeChecker" Location="/AttrChecker" template="attrChecker.html" attributes="eppn displayName" flushSession="true"/>
-            <md:AssertionConsumerService Location="/SAML2/POST" index="0" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" isDefault="true" />
-            <md:AssertionConsumerService Location="/SAML2/POST-SimpleSign" index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"/>
-            <md:AssertionConsumerService Location="/SAML2/Artifact" index="2" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"/>
-            <md:AssertionConsumerService Location="/SAML2/ECP" index="3" Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS"/>
-            <md:AssertionConsumerService Location="/SAML/POST" index="4" Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post"/>
-            <md:AssertionConsumerService Location="/SAML/Artifact" index="5" Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01"/>
+            <md:AssertionConsumerService Location="/SAML2/POST" index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" isDefault="true" />
+            <md:AssertionConsumerService Location="/SAML2/POST-SimpleSign" index="2" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign"/>
+            <md:AssertionConsumerService Location="/SAML2/Artifact" index="3" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact"/>
+            <md:AssertionConsumerService Location="/SAML2/ECP" index="4" Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS"/>
+            <md:AssertionConsumerService Location="/SAML/POST" index="5" Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post"/>
+            <md:AssertionConsumerService Location="/SAML/Artifact" index="6" Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01"/>
         </Sessions>
         <Errors supportContact="pippo@pippo.it" helpLocation="/about.html" styleSheet="/shibboleth-sp/main.css"/>
         <MetadataProvider type="XML" uri="https://idp.example.org/idp/shibboleth" backingFilePath="idp-example-org-metadata.xml" reloadInterval="600"/>
-        <MetadataProvider type="XML" file="spid/idp-aruba.xml"/>
-        <MetadataProvider type="XML" file="spid/dp-intesa.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-infocert.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-namiral.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-poste-italiane.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-register.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-sielte.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-ti-trust-technologies.xml"/>
-        <MetadataProvider type="XML" file="spid/idp-spid-test.xml"/>
+        <MetadataProvider type="XML" file="spid/idp-aruba.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-intesa.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-infocert.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-namiral.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-poste-italiane.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-register.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-sielte.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-ti-trust-technologies.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-spid-test.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-spid-gov-it.xml" validate="true"/>
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
         <AttributeResolver type="Query" subjectMatch="true"/>
         <CredentialResolver type="File" key="cert/sp.example.org.key" certificate="cert/sp.example.org.crt"/>
         <ApplicationOverride id="default-attrcs-2">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="0">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
-                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc1" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="1">
+                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc1" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="2">
                         <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" NameQualifier="https://sp.example.org/saml/sp">https://sp.example.org/saml/sp</saml:Issuer>
                     </samlp:AuthnRequest>
                 </SessionInitiator>
@@ -76,10 +77,10 @@
         </ApplicationOverride>
         <ApplicationOverride id="default-attrcs-3">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="0">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
-                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc2" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="2">
+                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc2" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="3">
                         <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" NameQualifier="https://sp.example.org/saml/sp">https://sp.example.org/saml/sp</saml:Issuer>
                     </samlp:AuthnRequest>
                 </SessionInitiator>
@@ -87,10 +88,10 @@
         </ApplicationOverride>
         <ApplicationOverride id="default-attrcs-4">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="0">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
-                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc3" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="3">
+                        xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc3" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="4">
                         <saml:Issuer Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity" NameQualifier="https://sp.example.org/saml/sp">https://sp.example.org/saml/sp</saml:Issuer>
                     </samlp:AuthnRequest>
                 </SessionInitiator>
