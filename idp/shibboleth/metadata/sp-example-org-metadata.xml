@@ -16,10 +16,10 @@ and do *NOT* provide it in real time to your partners.
                     <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
                 </ds:Transforms>
                 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                <ds:DigestValue>9z4xOcq/f37CxWGLKPh+yrxgP1ARtM3Nl2405tOTya0=</ds:DigestValue>
+                <ds:DigestValue>Fw/PUAAnuhIz/B8fVkvULViJzo9m0GTX77Eog91qpn0=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>XRrjROjmP4w6kAnifq9H+o+BF9Ypd4zZQwAVPwk+0NOAbNgMogBwnnYM4n3XS652 dIrUffnrZeJF0qR+/6lDNd7CpCQi45llxa7i49M0JozLE+5twjXtYWzcW1L/Tres 0XoY992FtQ8GRN4M3BD0rCMEMP6UiKnb7zxgbk4XkfLEe1EmnZE9Ig0PDpfA/iZ+ NQemAXG/vbYObCouQ2GS3hk08TbeeByF1cXMfTcQG8FFDsODKDzie5W2ItUBrR/A rAP9hoLuf9odWcF9GEi11jFxSypdv1j+ikQknvoCIoBrOufoo+wLpiIMZYVRg5Qs 1tFkC34Vt/EgeXCtafxvAA==</ds:SignatureValue>
+        <ds:SignatureValue>toN3lbR/+vwR6WroLRR6d+OE8+HCep0WTsB+u/twd8yWgVAEvJ5mw3s7fqzwFbPS gDKqmxBcKIuARzwSdsUUqC+uJZOsr3G9v9ljRv9iqksd6/BEKc+IPaeHQm6sB6ti jUJBBasxLYEEeDkj+Jb5asMX+2otTA/cYw9FuPOWQo9JkZIj4+EcaIkfGGcV0xie 8WOKDPq03jfNIidOazC7QE4Cj+Z/tpegURJ/vtFXKilkAxn2IwLtXan4byOWnhqP B7O5O0+s5HaGSjEKuCKUC63VISAXgF6PynlxLxNO5pRVrgrTEm7eninMVWYRhVLt er7n209vox+hBHF9e9C91w==</ds:SignatureValue>
         <ds:KeyInfo>
             <ds:KeyName>sp.example.org</ds:KeyName>
             <ds:X509Data>
@@ -110,49 +110,49 @@ klEP51sP3GDRcceIsRupEmLZCQc784boU2E7doA4+2lkAmYE
         <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.org/saml/SLO/POST"/>
         <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://sp.example.org/saml/SLO/REDIRECT"/>
         <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.org/saml/SAML2/POST" index="0"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp.example.org/saml/SAML2/POST-SimpleSign" index="1"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.example.org/saml/SAML2/Artifact" index="2"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp.example.org/saml/SAML2/ECP" index="3"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp.example.org/saml/SAML/POST" index="4"/>
-        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp.example.org/saml/SAML/Artifact" index="5"/>
-        <md:AttributeConsumingService index="0">
-            <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-        </md:AttributeConsumingService>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.org/saml/SAML2/POST" index="1"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://sp.example.org/saml/SAML2/POST-SimpleSign" index="2"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://sp.example.org/saml/SAML2/Artifact" index="3"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://sp.example.org/saml/SAML2/ECP" index="4"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://sp.example.org/saml/SAML/POST" index="5"/>
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp.example.org/saml/SAML/Artifact" index="6"/>
         <md:AttributeConsumingService index="1">
-            <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="placeOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="countyOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="dateOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="gender" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-            <md:RequestedAttribute Name="idCard" isRequired="true"/>
-            <md:RequestedAttribute Name="mobilePhone" isRequired="true"/>
-            <md:RequestedAttribute Name="email" isRequired="true"/>
-            <md:RequestedAttribute Name="digitalAddress" isRequired="true"/>
+            <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="false"/>
+            <md:RequestedAttribute Name="name" isRequired="false"/>
+            <md:RequestedAttribute Name="familyName" isRequired="false"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="false"/>
         </md:AttributeConsumingService>
         <md:AttributeConsumingService index="2">
-            <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-            <md:RequestedAttribute Name="companyName" isRequired="true"/>
-            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+            <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="false"/>
+            <md:RequestedAttribute Name="name" isRequired="false"/>
+            <md:RequestedAttribute Name="familyName" isRequired="false"/>
+            <md:RequestedAttribute Name="placeOfBirth" isRequired="false"/>
+            <md:RequestedAttribute Name="countyOfBirth" isRequired="false"/>
+            <md:RequestedAttribute Name="dateOfBirth" isRequired="false"/>
+            <md:RequestedAttribute Name="gender" isRequired="false"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="false"/>
+            <md:RequestedAttribute Name="idCard" isRequired="false"/>
+            <md:RequestedAttribute Name="mobilePhone" isRequired="false"/>
+            <md:RequestedAttribute Name="email" isRequired="false"/>
+            <md:RequestedAttribute Name="digitalAddress" isRequired="false"/>
         </md:AttributeConsumingService>
         <md:AttributeConsumingService index="3">
+            <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
+            <md:RequestedAttribute Name="spidCode" isRequired="false"/>
+            <md:RequestedAttribute Name="name" isRequired="false"/>
+            <md:RequestedAttribute Name="familyName" isRequired="false"/>
+            <md:RequestedAttribute Name="fiscalNumber" isRequired="false"/>
+            <md:RequestedAttribute Name="companyName" isRequired="false"/>
+            <md:RequestedAttribute Name="ivaCode" isRequired="false"/>
+        </md:AttributeConsumingService>
+        <md:AttributeConsumingService index="4">
             <md:ServiceName xml:lang="it">Set Attributi 4 - ID Persone giuridiche</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="companyName" isRequired="true"/>
-            <md:RequestedAttribute Name="registeredOffice" isRequired="true"/>
-            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+            <md:RequestedAttribute Name="spidCode" isRequired="false"/>
+            <md:RequestedAttribute Name="companyName" isRequired="false"/>
+            <md:RequestedAttribute Name="registeredOffice" isRequired="false"/>
+            <md:RequestedAttribute Name="ivaCode" isRequired="false"/>
         </md:AttributeConsumingService>
     </md:SPSSODescriptor>
     <md:Organization>
