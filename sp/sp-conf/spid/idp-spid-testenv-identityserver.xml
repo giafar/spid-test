@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?> 
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_5c2n3699-c647-82gd-hfjs-ak4xu6710475" entityID="idp.spid.gov.it"> 
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_5c2n3699-c647-82gd-hfjs-ak4xu6710475" entityID="spid-testenv-identityserver"> 
 	<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"> 
 		<ds:SignedInfo> 
 			<ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/> 
@@ -79,11 +79,11 @@
 				</ds:X509Data> 
 			</ds:KeyInfo> 
 		</md:KeyDescriptor> 
-		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.spid.gov.it:9443/samlsso" ResponseLocation="https://idp.spid.gov.it:9443/samlsso"/> 
-		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.spid.gov.it:9443/samlsso" ResponseLocation="https://idp.spid.gov.it:9443/samlsso"/> 
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://spid-testenv-identityserver:9443/samlsso" ResponseLocation="https://spid-testenv-identityserver:9443/samlsso"/> 
+		<md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://spid-testenv-identityserver:9443/samlsso" ResponseLocation="https://spid-testenv-identityserver:9443/samlsso"/> 
 		<md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat> 
-		<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.spid.gov.it:9443/samlsso"/> 
-		<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.spid.gov.it:9443/samlsso"/> 
+		<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://spid-testenv-identityserver:9443/samlsso"/> 
+		<md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://spid-testenv-identityserver:9443/samlsso"/> 
 		<saml2:Attribute xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" Name="spidCode" NameFormat="xsi:string"/> 
 		<saml2:Attribute xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" Name="name" NameFormat="xsi:string"/> 
 		<saml2:Attribute xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" Name="familyName" NameFormat="xsi:string"/> 

@@ -23,7 +23,7 @@
             </Host>
         </RequestMap>
     </RequestMapper>
-    <ApplicationDefaults id="default" entityID="https://sp.example.org/saml/sp" REMOTE_USER="eppn persistent-id targeted-id" signing="true" encryption="false" attributePrefix="SHIB_">
+    <ApplicationDefaults id="default" entityID="https://sp.example.org/saml/sp" REMOTE_USER="eppn persistent-id targeted-id" signing="true" signingAlg="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" encryption="false" attributePrefix="SHIB_">
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
             <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
                 <samlp:AuthnRequest 
@@ -59,7 +59,7 @@
         <MetadataProvider type="XML" file="spid/idp-register.xml" validate="true"/>
         <MetadataProvider type="XML" file="spid/idp-sielte.xml" validate="true"/>
         <MetadataProvider type="XML" file="spid/idp-ti-trust-technologies.xml" validate="true"/>
-        <MetadataProvider type="XML" file="spid/idp-spid-test.xml" validate="true"/>
+        <MetadataProvider type="XML" file="spid/idp-spid-testenv-identityserver.xml" validate="true"/>
         <MetadataProvider type="XML" file="spid/idp-spid-gov-it.xml" validate="true"/>
         <AttributeExtractor type="XML" validate="true" reloadChanges="false" path="attribute-map.xml"/>
         <AttributeResolver type="Query" subjectMatch="true"/>
