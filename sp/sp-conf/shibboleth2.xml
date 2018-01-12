@@ -15,17 +15,17 @@
         <RequestMap applicationId="default">
             <Host name="sp.example.org" redirectToSSL="443">
                 <Path name="secure" authType="shibboleth" requireSession="true" exportAssertion="true"/>
-                <Path name="secure-spidl1" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1"/>
-                <Path name="secure-spidl2" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL2"/>
-                <Path name="secure-spidl1-attr-2" applicationId="default-attrcs-2" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1"/>
-                <Path name="secure-spidl1-attr-3" applicationId="default-attrcs-3" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1"/>
-                <Path name="secure-spidl1-attr-4" applicationId="default-attrcs-4" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="urn:oasis:names:tc:SAML:2.0:ac:classes:SpidL1"/>
+                <Path name="secure-spidl1" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="https://www.spid.gov.it/SpidL1"/>
+                <Path name="secure-spidl2" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="https://www.spid.gov.it/SpidL2"/>
+                <Path name="secure-spidl1-attr-2" applicationId="default-attrcs-2" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="https://www.spid.gov.it/SpidL1"/>
+                <Path name="secure-spidl1-attr-3" applicationId="default-attrcs-3" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="https://www.spid.gov.it/SpidL1"/>
+                <Path name="secure-spidl1-attr-4" applicationId="default-attrcs-4" authType="shibboleth" requireSession="true" exportAssertion="true" authnContextClassRef="https://www.spid.gov.it/SpidL1"/>
             </Host>
         </RequestMap>
     </RequestMapper>
     <ApplicationDefaults id="default" entityID="https://sp.example.org/saml/sp" REMOTE_USER="eppn persistent-id targeted-id" signing="true" signingAlg="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" encryption="false" attributePrefix="SHIB_">
         <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-            <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
+            <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="exact" acsByIndex="false" acsIndex="1">
                 <samlp:AuthnRequest 
                     xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
                     xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc0" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="1">
@@ -66,7 +66,7 @@
         <CredentialResolver type="File" key="cert/sp.example.org.key" certificate="cert/sp.example.org.crt"/>
         <ApplicationOverride id="default-attrcs-2">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="exact" acsByIndex="false" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
                         xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc1" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="2">
@@ -77,7 +77,7 @@
         </ApplicationOverride>
         <ApplicationOverride id="default-attrcs-3">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="exact" acsByIndex="false" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
                         xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc2" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="3">
@@ -88,7 +88,7 @@
         </ApplicationOverride>
         <ApplicationOverride id="default-attrcs-4">
             <Sessions lifetime="28800" timeout="3600" relayState="ss:mem" checkAddress="true" handlerSSL="true" cookieProps="https" handlerURL="/saml" postData="ss:mem" exportLocation="http://localhost:8080/Shibboleth.sso/GetAssertion" exportACL="127.0.0.1">
-                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="minimum" acsByIndex="true" acsIndex="1">
+                <SessionInitiator type="SAML2" Location="/Login" entityID="https://idp.example.org/idp/shibboleth" forceAuthn="true" NameIDFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient" signing="true" authnContextComparison="exact" acsByIndex="false" acsIndex="1">
                     <samlp:AuthnRequest 
                         xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" 
                         xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" ID="AuthNAttrConsSvc3" Version="2.0" IssueInstant="2017-01-01T00:00:00Z" AttributeConsumingServiceIndex="4">
