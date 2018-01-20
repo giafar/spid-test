@@ -1,23 +1,16 @@
-FROM httpd:2.4
+FROM php:7.0-apache
 
-ARG APACHE_ROOT=/usr/local/apache2
-ARG WEB_ROOT=/usr/local/apache2/htdocs
+ARG APACHE_ROOT=/etc/apache2
+ARG WEB_ROOT=/var/www/html
 
 LABEL mantainer="gianluca.fares@giafar.it"
 
-RUN apt-get update && apt-get install -y --no-install-recommends vim shibboleth-sp2-utils shibboleth-sp2-common curl unzip
+RUN apt-get update && apt-get install -y --no-install-recommends vim shibboleth-sp2-utils shibboleth-sp2-common curl unzip libapache2-mod-shib2
 
-RUN cd /tmp && apt-get download libapache2-mod-shib2 && \
-    mkdir shib && find . -name "libapache*.deb" -type f -exec dpkg -x {} /tmp/shib \; && \
-    find . -name "*shib2.so" -exec cp {} ${APACHE_ROOT}/modules \; && \
-    chmod +x ${APACHE_ROOT}/modules/mod_shib2.so
+RUN	rm -rf /var/lib/apt/lists/* && rm -fR /tmp/* 
 
-RUN	rm -rf /var/lib/apt/lists/* && rm -fR /tmp/* && mkdir /var/log/shibboleth
-
-RUN sed -i '/httpd/i \
-/etc/init.d/shibd start ' /usr/local/bin/httpd-foreground
-
-RUN echo "Include conf/extra/httpd-shib2.conf" >> ${APACHE_ROOT}/conf/httpd.conf
+RUN sed -i '/exec/i \
+/etc/init.d/shibd start ' /usr/local/bin/docker-php-entrypoint
 
 COPY ./sp-httpd/ ${APACHE_ROOT}/
 
