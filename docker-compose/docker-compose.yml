@@ -22,6 +22,8 @@ services:
     networks:
       shibboleth-net:
         ipv4_address: 172.20.0.3
+    volumes: 
+      - idp_metadata:/opt/shibboleth-idp/sp-metadata
 
   shibboleth-sp:
     image: giafar/spid-sp
@@ -35,6 +37,9 @@ services:
     networks:
       shibboleth-net:
         ipv4_address: 172.20.0.4
+
+volumes:
+  idp_metadata:
 
 networks: 
   shibboleth-net:

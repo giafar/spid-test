@@ -10,6 +10,5 @@
                         urn:mace:shibboleth:2.0:resource http://shibboleth.net/schema/idp/shibboleth-resource.xsd 
                         urn:mace:shibboleth:2.0:security http://shibboleth.net/schema/idp/shibboleth-security.xsd
                         urn:oasis:names:tc:SAML:2.0:metadata http://docs.oasis-open.org/security/saml/v2.0/saml-schema-metadata-2.0.xsd">
-    <MetadataProvider id="LocalMetadata"  xsi:type="FilesystemMetadataProvider" metadataFile="%{idp.home}/metadata/sp-example-org-metadata.xml"/>
-    <MetadataProvider id="LocalFolder" xsi:type="Folder" path="%{idp.home}/sp-metadata"/>
+    <MetadataProvider id="LocalFolder" xsi:type="LocalDynamicMetadataProvider" sourceDirectory="%{idp.home}/sp-metadata"/>
 </MetadataProvider>
