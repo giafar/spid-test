@@ -3,23 +3,23 @@ This is example metadata only. Do *NOT* supply it as is without review,
 and do *NOT* provide it in real time to your partners.
  -->
 <md:EntityDescriptor 
-    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_546035e09b23679deda645b0688d0d17a2d0ef81" entityID="https://sp.example.org/saml/sp" 
+    xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_ac5e671e900b7b7db957b97e8f8bc85751847472" entityID="https://sp.example.org" 
     xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
     <ds:Signature 
         xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
         <ds:SignedInfo>
             <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
             <ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
-            <ds:Reference URI="#_546035e09b23679deda645b0688d0d17a2d0ef81">
+            <ds:Reference URI="#_ac5e671e900b7b7db957b97e8f8bc85751847472">
                 <ds:Transforms>
                     <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
                     <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
                 </ds:Transforms>
                 <ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
-                <ds:DigestValue>Fw/PUAAnuhIz/B8fVkvULViJzo9m0GTX77Eog91qpn0=</ds:DigestValue>
+                <ds:DigestValue>G1l4RvkKhxCVNbFohjj/KjpnF1EJc3o/KOV9q+b+r9M=</ds:DigestValue>
             </ds:Reference>
         </ds:SignedInfo>
-        <ds:SignatureValue>toN3lbR/+vwR6WroLRR6d+OE8+HCep0WTsB+u/twd8yWgVAEvJ5mw3s7fqzwFbPS gDKqmxBcKIuARzwSdsUUqC+uJZOsr3G9v9ljRv9iqksd6/BEKc+IPaeHQm6sB6ti jUJBBasxLYEEeDkj+Jb5asMX+2otTA/cYw9FuPOWQo9JkZIj4+EcaIkfGGcV0xie 8WOKDPq03jfNIidOazC7QE4Cj+Z/tpegURJ/vtFXKilkAxn2IwLtXan4byOWnhqP B7O5O0+s5HaGSjEKuCKUC63VISAXgF6PynlxLxNO5pRVrgrTEm7eninMVWYRhVLt er7n209vox+hBHF9e9C91w==</ds:SignatureValue>
+        <ds:SignatureValue>dos09ypSQ6i8YcVQQJvYLZl1z8StYooQLJxuGYGmmBxsLx8GirU7//9atMT3kiPC PphTzJIbkn2jokGfgyVPD85WnZXS3lZ0hkL6ZpXD6tn1pqRPjmdJKM5VspBce/NB YP3XSmuk5vP77qM1t4g0Kp6ebqAuTEREbaxSQgKD+nWSNVVrFPkGZfum3X1ULLJy PpGVhuqI4tJsEiwAntwE4cGVLIFOGiEDnuGD0JB/RqLM7GrSx+jYd/BMsTdYlIov yvGNzZuxE4AtquCir139S29DxlWxUqSn+YWtNLiRrDfo0EuZfeue/URw8n/MOpAw ML59uHQsvCJ5t2+HN/hz2w==</ds:SignatureValue>
         <ds:KeyInfo>
             <ds:KeyName>sp.example.org</ds:KeyName>
             <ds:X509Data>
