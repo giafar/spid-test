@@ -15,7 +15,7 @@ ADD https://shibboleth.net/downloads/identity-provider/3.3.2/shibboleth-identity
 COPY ./tomcat/ /usr/local/tomcat/
 
 #RUN cd ${TMPDIR} && tar xzf shibboleth-identity-provider-3.3.2.tar.gz
-RUN cd ${TMPDIR}
+RUN cd ${TMPDIR} && tar xvzf shibboleth-identity-provider-3.3.2.tar.gz
 
 COPY ./shibboleth/ ${TMPDIR}/shibboleth-identity-provider-3.3.2/
 
@@ -59,5 +59,5 @@ RUN cd ${INSTALLDIR}/edit-webapp/WEB-INF/lib && \
     curl -O https://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.jar && \
     cd ${TMPDIR}/shibboleth-identity-provider-3.3.2/ && \
     bin/build.sh -Didp.target.dir=${INSTALLDIR} && \
-    rm -fR ${TMPDIR}/shibboleth-identity-provider-3.3.2 
+    rm -fR ${TMPDIR}/shibboleth-identity-provider* 
 
