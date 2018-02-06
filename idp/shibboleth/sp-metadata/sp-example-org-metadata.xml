@@ -118,41 +118,41 @@ klEP51sP3GDRcceIsRupEmLZCQc784boU2E7doA4+2lkAmYE
         <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://sp.example.org/saml/SAML/Artifact" index="6"/>
         <md:AttributeConsumingService index="1">
             <md:ServiceName xml:lang="it">Set Attributi 1 - ID Cittadini minimo</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
+            <md:RequestedAttribute Name="spidCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="familyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="fiscalNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
         </md:AttributeConsumingService>
         <md:AttributeConsumingService index="2">
             <md:ServiceName xml:lang="it">Set Attributi 2 - ID Cittadini completo</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="placeOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="countyOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="dateOfBirth" isRequired="true"/>
-            <md:RequestedAttribute Name="gender" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-            <md:RequestedAttribute Name="idCard" isRequired="true"/>
-            <md:RequestedAttribute Name="mobilePhone" isRequired="true"/>
-            <md:RequestedAttribute Name="email" isRequired="true"/>
-            <md:RequestedAttribute Name="digitalAddress" isRequired="true"/>
+            <md:RequestedAttribute Name="spidCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="familyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="placeOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="countyOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="dateOfBirth" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="gender" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="fiscalNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="idCard" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="mobilePhone" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="email" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="digitalAddress" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
         </md:AttributeConsumingService>
         <md:AttributeConsumingService index="3">
             <md:ServiceName xml:lang="it">Set Attributi 3 - ID Cittadini e Persone giuridiche</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="name" isRequired="true"/>
-            <md:RequestedAttribute Name="familyName" isRequired="true"/>
-            <md:RequestedAttribute Name="fiscalNumber" isRequired="true"/>
-            <md:RequestedAttribute Name="companyName" isRequired="true"/>
-            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+            <md:RequestedAttribute Name="spidCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="name" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="familyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="fiscalNumber" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="companyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="ivaCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
         </md:AttributeConsumingService>
         <md:AttributeConsumingService index="4">
             <md:ServiceName xml:lang="it">Set Attributi 4 - ID Persone giuridiche</md:ServiceName>
-            <md:RequestedAttribute Name="spidCode" isRequired="true"/>
-            <md:RequestedAttribute Name="companyName" isRequired="true"/>
-            <md:RequestedAttribute Name="registeredOffice" isRequired="true"/>
-            <md:RequestedAttribute Name="ivaCode" isRequired="true"/>
+            <md:RequestedAttribute Name="spidCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="companyName" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="registeredOffice" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
+            <md:RequestedAttribute Name="ivaCode" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"/>
         </md:AttributeConsumingService>
     </md:SPSSODescriptor>
     <md:Organization>

@@ -14,58 +14,58 @@
     <AttributeFilterPolicy id="spidAttributeAll">
         <PolicyRequirementRule xsi:type="ANY" />
         <AttributeRule attributeID="mail">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="spidCode">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="name">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="familyName">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="placeOfBirth">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="countyOfBirth">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="dateOfBirth">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="gender">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="companyName">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="registeredOffice">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="fiscalNumber">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="ivaCode">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="idCard">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="mobilePhone">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="email">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="address">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="expirationDate">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
         <AttributeRule attributeID="digitalAddress">
-            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="true"/>
+            <PermitValueRule xsi:type="AttributeInMetadata" onlyIfRequired="false"/>
         </AttributeRule>
     </AttributeFilterPolicy>
 </AttributeFilterPolicyGroup>

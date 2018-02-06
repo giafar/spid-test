@@ -50,7 +50,7 @@
             <md:AssertionConsumerService Location="/SAML/Artifact" index="6" Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01"/>
         </Sessions>
         <Errors supportContact="pippo@pippo.it" helpLocation="/about.html" styleSheet="/shibboleth-sp/main.css"/>
-        <MetadataProvider type="XML" uri="https://idp.example.org/idp/shibboleth" backingFilePath="idp-example-org-metadata.xml" reloadInterval="600"/>
+        <MetadataProvider type="XML" uri="https://idp.example.org/idp/shibboleth" backingFilePath="idp-example-org-metadata.xml" reloadInterval="60"/>
         <MetadataProvider type="XML" file="spid/idp-aruba.xml" validate="true"/>
         <MetadataProvider type="XML" file="spid/idp-intesa.xml" validate="true"/>
         <MetadataProvider type="XML" file="spid/idp-infocert.xml" validate="true"/>
